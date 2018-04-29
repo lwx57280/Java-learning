@@ -1,7 +1,5 @@
 # Java-learning
 java学习之路
-# Java-learning
-java学习之路
 
 一、基础知识：
 1、JVM、JRE和JDK的区别：
@@ -103,19 +101,20 @@ java学习之路
 		
 ####(3)括号与运算符级别
     
-        运算符优先级
+  运算符优先级
             
         a && b || c 等价于	(a && b) || c 
         
         a += b +=c  等价于 a += (b +=c)
         
-        也就是将b += c的结果（加上c之后的b）加到a上。
-        
-        
-        运算符优先级											结合性
-        ----------------------------------------------------------------
-        
-        
+        也就是将b += c的结果（加上c之后的b）加到a上。
+	
+	
+	
+
+![运算符优先级](https://github.com/lwx57280/Java-learning/blob/master/img-folder/operator.jpg)
+
+
 		
 
 8、java语言的三种技术架构
