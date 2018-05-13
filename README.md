@@ -375,3 +375,152 @@ java学习之路
         5）将职责过多的类进行分解。
         
         6）类名和方法名要能够体现它们的职责。
+        
+  
+12、制作API(次重点)
+
+	API(全拼):Application Program Interface 应用程序编程接口。
+	(1)类中的内容需要用文档注释。
+		域注释
+			/**
+			 * The "Hearts" card suit
+			 */
+			 public static final int HEARTS=1;
+			 
+	(2)使用JDK\bin目录下的javadoc工具。
+		格式:javadoc -d 目录 -author -version ArrayTool.java
+ 
+13、单例设计模式：
+
+	(1)设计模式：
+		解决某类问题行之有效的方法，是一种思想，是规律的总结
+	(2)用来保证某个类在内存中只有一个对象
+	(3)保证唯一性的思想及步骤
+		**为了避免其他程序建立该类对象，先禁止其他程序建立该类对象，即将构造函数私有化
+		**为了其他程序访问到该类对象，须在本类中创建一个该类私有对象
+		**为了方便其他程序访问到该类对象，可对外提供一个公共访问方式
+
+	比如API中的Runtime类就是单例设计模式。
+
+	(4)单例设计模式的两种方式
+		A:饿汉式 当类加载的时候，就创建对象。	
+		class Student
+		{
+			private Student(){}
+			
+			private static final Student s = new Student();
+			
+			public static Student getInstance()
+			{
+				return s;
+			}
+		}
+		B:懒汉式 当使用的使用，才去创建对象。
+		class Student
+		{
+			private Student(){}
+
+			private static final Student s = null;
+			
+			public static Student getInstance()
+			{
+				if(s==null) 
+				{
+					//线程1就进来了，线程2就进来了。
+					s = new Student();
+				}
+				return s;
+			}
+		}
+	饿汉式和懒汉式的区别：
+		**
+		饿汉式是类一加载进内存就创建好了对象；
+		懒汉式则是类才加载进内存的时候，对象还没有存在，只有调用了getInstance()方法时，
+		对象才开始创建。
+		**
+		懒汉式是延迟加载，如果多个线程同时操作懒汉式时就有可能出现线程安全问题，解决线程安全问题
+		可以加同步来解决。但是加了同步之后，每一次都要比较锁，效率就变慢了，
+		所以可以加双重判断来提高程序效率。
+		注：开发常用饿汉式，因为饿汉式简单安全。懒汉式多线程的时候容易发生问题
+
+14、Math类的使用(重点)
+
+	(1)数学操作类:该类没有构造函数，方法均为静态的	
+	(2)掌握内容
+		A:成员变量
+			**E：比任何其他值都更接近e（即自然对数的底数）的double值。
+			**PI：比任何其他值都更接近pi（即圆的周长与直径之比）的double值。
+		B:成员方法
+			**static double abs(double a) 
+				返回 double 值的绝对值。返回绝对值
+			**static double ceil(double a) 
+				返回最小的（最接近负无穷大）double 值，该值大于等于参数，并等于某个整数。 
+			**static double floor(double a) 
+				返回最大的（最接近正无穷大）double 值，该值小于等于参数，并等于某个整数。 
+			**max：返回两个值中较大的那个
+			**min：返回两个值中较小的那个
+			**static long round(double a) 返回最接近参数的 long。
+			  static int round(float a) 返回最接近参数的 int。 
+			**static double random() 
+				返回带正号的 double 值，该值大于等于 0.0 且小于 1.0。 
+			**static double pow(double a, double b) 
+				返回第一个参数的第二个参数次幂的值。 
+			**static double sqrt(double a) 
+				 返回正确舍入的 double 值的正平方根。 
+15、Random类的使用(重点)
+
+	(1)产生随机数的类
+	(2)掌握内容
+		A:构造方法
+			**Random() 创建一个新的随机数生成器。 
+			**Random(long seed) 使用单个 long 种子创建一个新的随机数生成器。
+		B:成员方法
+			**int nextInt() 返回下一个伪随机数，它是此随机数生成器的序列中均匀分布的 int 值。 
+			**int nextInt(int n) 返回一个伪随机数，它是取自此随机数生成器序列的、
+			在 0（包括）和指定值（不包括）之间均匀分布的 int 值。
+
+16、Scanner类的使用
+
+	(1)可以获取从键盘的输入数据
+	(2)掌握内容
+		构造方法：
+			Scanner(InputStream source) 构造一个新的 Scanner，它生成的值是从指定的输入流扫描的。
+			如：Scanner sc = new Scanner(System.in);
+		方法摘要
+			sc.nextInt();获取整型数据
+			sc.nextLine();获取字符串数据
+17、继承(重点)
+-------------
+	(1)把很多类的相同特征和行为进行抽取，用一个类来描述。让多个类和这个类产生一个关系。
+	   这样的话，多个类就可以省略很多代码。这个关系就是继承。java中用extends关键字表示。
+	
+	(2)继承的体系结构
+	
+		A:多个具体的对象，不断的向上抽取共享的内容，最终形成了一个体系。这个体系叫做继承体系。
+		B:继承体系的学习和使用原则
+			**学习顶层的内容。因为他是整个体系的共性内容。
+			**创建子类使用。也就是使用底层的具体对象。
+	
+	(3)继承的特点:
+		A:java中只能单继承，没有多继承。
+		B:java可以有多重(层)继承。
+	
+	(4)继承的好处：
+		继承的出现提高了代码的复用性。
+		继承的出现让类与类之间产生了关系，提供了多态的前提。
+
+	(5)子父类中的成员关系
+		
+		A:成员变量
+		
+			在子类方法中使用一个变量时：
+			首先，在方法的局部变量中找这个变量，有则使用。
+			否则，在本类中找成员变量，有则使用。
+			否则，在父类中找成员变量，有则使用。
+			否则，报错。
+		B:成员方法
+		
+			用子类对象使用一个方法时。
+			首先，在子类中找这个方法，有则使用。
+			否则，在父类中找这个方法，有则使用。
+			否则，报错。
