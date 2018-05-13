@@ -13,6 +13,5 @@ public class ConstructorTest {
         //打印有关所有雇员对象的信息
         for(Employee e:staff)
             System.out.println("name=:"+e.getName()+",id=:"+e.getId()+",salary=:"+e.getSalary());
-
     }
 }
