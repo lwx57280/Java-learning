@@ -2,7 +2,6 @@ package com;
 
 public class ParamTest {
     public static void main(String[] args) {
-
         // Test1:方法不能修改数值参数
         System.out.println("Testing tripleValue:");
         double percent = 10;
@@ -38,8 +37,7 @@ public class ParamTest {
     }
 
     /**
-     * works
-     *
+     * works     *
      * @param harry
      */
     private static void tripleSalary(Employee x) {
