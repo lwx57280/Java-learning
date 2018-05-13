@@ -1,10 +1,12 @@
 package com;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
-public class Employee {
+public class Employee implements Serializable{
 
+    private static final long serialVersionUID = 8447311297406481998L;
     private int id;
 
     private String name;

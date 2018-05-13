@@ -2,6 +2,8 @@ package com;
 
 public class Manager extends Employee {
 
+    private static final long serialVersionUID = 5908474939085985057L;
+
     private double bouns;
 
     public Manager(String name, double salary, int year, int month, int day) {
