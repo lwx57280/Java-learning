@@ -1,4 +1,4 @@
-package math.operator;
+package math.oper;
 
 /**
  * @Description: 算术运算符
