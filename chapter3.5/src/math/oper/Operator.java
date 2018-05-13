@@ -86,7 +86,6 @@ public class Operator {
     * @date        2018/5/13 18:04
     */
     public static void relationArithmetic(){
-
 //  运算符	描述	                                                            例子
 //  ==	检查如果两个操作数的值是否相等，如果相等则条件为真。	            （A == B）为假(非真)。
 //  !=	检查如果两个操作数的值是否相等，如果值不相等则条件为真。	         (A != B) 为真。
