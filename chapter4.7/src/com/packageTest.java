@@ -24,7 +24,6 @@ public class packageTest {
         out.println("aTrue=:"+aTrue);
         // 因为静态导入语句，我们不必使用 System.out
         out.println("name=:" + harry.getName() + ",salary=:" + harry.getSalary());
-
     }
 
 }
