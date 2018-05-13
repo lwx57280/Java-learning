@@ -241,7 +241,6 @@ public class Retirement {
             numbers[r] = numbers[n - 1];
             n--;
         }
-
         // 打印排序数组
         Arrays.sort(result);
         System.out.println("打赌下面的组合会让你发财的！");
