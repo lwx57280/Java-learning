@@ -12,7 +12,8 @@ public class Manager extends Employee {
         this.bouns = 0;
     }
 
-    public double getSalary(){
+    @Override
+    public double getSalary() {
         double baseSalary= super.getSalary();
         return baseSalary+ bouns;
     }
