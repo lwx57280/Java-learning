@@ -31,13 +31,13 @@ public class sortMapDemo {
         Person xiaoqiangTwo = new Person("小强", 15);
 
         Map<Integer, Person> map = new HashMap<>();
-        map.put(2, zhangsan);
-        map.put(5, lisi);
+        map.put(2, wangliuTwo);
+        map.put(5, xiaoqiangTwo);
         map.put(4, xiaoqiangOne);
-        map.put(3, wangliuOne);
-        map.put(1, xiaoqiangTwo);
-        map.put(7, wangliuTwo);
-        map.put(6, xiaoqiangTwo);
+        map.put(3, wangliuTwo);
+        map.put(1, wangliuOne);
+        map.put(7, lisi);
+        map.put(6, zhangsan);
         return map;
     }
 
@@ -97,8 +97,6 @@ public class sortMapDemo {
             this.name = name;
             this.age = age;
         }
-
-
 
         public String getName() {
             return name;
