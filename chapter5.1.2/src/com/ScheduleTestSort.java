@@ -75,10 +75,14 @@ public class ScheduleTestSort {
     private static void printList(List<TrainingSchedule> scheduleList) {
 
         for (TrainingSchedule schedule: scheduleList) {
-            System.out.println("schedule=:"+schedule.getId()+"Title=:"+schedule.getTitle());
+            System.out.println("schedule=:"+schedule.getId()+",Title=:"+schedule.getTitle());
         }
     }
     private static  Map<String, Integer> map = new HashMap<>();
+
+    /**
+     * 定义比较规则
+     */
     static {
         map.put("第一天",1);
         map.put("第二天",2);
@@ -138,16 +142,13 @@ public class ScheduleTestSort {
     private static void print(List<List<TrainingSchedule>> resultList) {
 
         if(resultList.size()!=0&& !resultList.isEmpty()) {
-            int a=1;
             for (int i = 0; i < resultList.size(); i++) {
-                System.out.println("第"+a+"组");
+               System.out.println("第"+(i+1)+"组");
                for (int j=0;j<resultList.get(i).size();j++){
                    TrainingSchedule trainingSchedule = resultList.get(i).get(j);
                    System.out.println("trainingSchedule=:"+trainingSchedule.getId()+",Titile=:"+trainingSchedule.getTitle());
                }
-               a++;
             }
         }
     }
-
 }
