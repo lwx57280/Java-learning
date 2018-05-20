@@ -7,7 +7,7 @@ import java.util.*;
 public class sortMapDemo {
     public static void main(String[] args) {
         Map<Integer, Person> map = initMap();
-
+        show(map);
         Map<Integer, Person> personMap = sortMap(map, true);
         System.out.println("升序:");
         show(personMap);
@@ -38,6 +38,7 @@ public class sortMapDemo {
         map.put(1, wangliuOne);
         map.put(7, lisi);
         map.put(6, zhangsan);
+        map.put(11, lisi);
         return map;
     }
 
