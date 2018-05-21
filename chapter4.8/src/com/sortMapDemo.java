@@ -1,13 +1,12 @@
 package com;
 
 
-import java.lang.reflect.Field;
 import java.util.*;
 
 public class sortMapDemo {
     public static void main(String[] args) {
         Map<Integer, Person> map = initMap();
-        show(map);
+        //show(map);
         Map<Integer, Person> personMap = sortMap(map, true);
         System.out.println("升序:");
         show(personMap);
@@ -23,22 +22,22 @@ public class sortMapDemo {
      * @return
      */
     private static Map<Integer, Person> initMap() {
-        Person zhangsan = new Person("张三", 20);
-        Person lisi = new Person("李四", 30);
-        Person wangliuOne = new Person("王六", 10);
-        Person wangliuTwo = new Person("王六", 10);
-        Person xiaoqiangOne = new Person("小强", 15);
-        Person xiaoqiangTwo = new Person("小强", 15);
+        Person zhangsan = new Person(2,"张三", 20);
+        Person lisi = new Person(5,"李四", 30);
+        Person wangliuOne = new Person(4,"王六", 10);
+        Person wangliuTwo = new Person(3,"王六", 10);
+        Person xiaoqiangOne = new Person(1,"小强", 15);
+        Person xiaoqiangTwo = new Person(11,"小强", 15);
+        Person xiongda = new Person(13,"熊大", 25);
 
         Map<Integer, Person> map = new HashMap<>();
-        map.put(2, wangliuTwo);
-        map.put(5, xiaoqiangTwo);
-        map.put(4, xiaoqiangOne);
-        map.put(3, wangliuTwo);
-        map.put(1, wangliuOne);
-        map.put(7, lisi);
-        map.put(6, zhangsan);
-        map.put(11, lisi);
+        map.put(wangliuTwo.getId(), wangliuTwo);
+        map.put(xiaoqiangTwo.getId(), xiaoqiangTwo);
+        map.put(xiaoqiangOne.getId(), xiaoqiangOne);
+        map.put(wangliuOne.getId(), wangliuOne);
+        map.put(lisi.getId(), lisi);
+        map.put(zhangsan.getId(), zhangsan);
+        map.put(xiongda.getId(), xiongda);
         return map;
     }
 
@@ -73,6 +72,7 @@ public class sortMapDemo {
                     return key1.compareTo(key2);
                 }
             });
+            // 数据是用TreeMap存储的
             sortTempMap.putAll(origMap);
             return (Map<K, V>) sortTempMap;
         } else {
@@ -86,17 +86,30 @@ public class sortMapDemo {
             return (Map<K, V>) sortTempMap;
         }
     }
+
     static class Person {
 
+        private Integer id;
+
         private String name;
-        private int age;
+
+        private Integer age;
 
         public Person() {
         }
 
-        public Person(String name, int age) {
+        public Person(Integer id, String name, Integer age) {
+            this.id = id;
             this.name = name;
             this.age = age;
+        }
+
+        public Integer getId() {
+            return id;
+        }
+
+        public void setId(Integer id) {
+            this.id = id;
         }
 
         public String getName() {
@@ -107,13 +120,12 @@ public class sortMapDemo {
             this.name = name;
         }
 
-        public int getAge() {
+        public Integer getAge() {
             return age;
         }
 
-        public void setAge(int age) {
+        public void setAge(Integer age) {
             this.age = age;
         }
     }
-
 }
