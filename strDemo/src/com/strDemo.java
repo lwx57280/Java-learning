@@ -1,18 +1,39 @@
 package com;
 
-import java.io.Console;
 import java.util.Scanner;
 
 public class strDemo {
-
+    // 静态成员变量,默认值为null
+    private static String str;
+    //str是类的成员变量(非静态)，默认值为null
+   // String str;
     public static void main(String[] args) {
         //print();
         //连接
 //        concat();
+        strDemo demo = new strDemo();
+        try {
+            StringBuffer a = new StringBuffer("A");
+            StringBuffer b = new StringBuffer("B");
+            mereg(a, b);
+            System.out.println(a + "," + b);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        // str是类的成员变量。在静态方法中可以直接访问静态变量;
+        // 访问非静态成员变量必须通过实例对象方式调用否则运行异常
+       System.out.println("s=" + str);
+//        strBuilderDemo();
+//
+//        demoInput();
+    }
 
-        strBuilderDemo();
+    private static void mereg(StringBuffer x, StringBuffer y) {
+        x.append(y).append(x);
+        System.out.println("x=:"+x);
+        y = x;
 
-        demoInput();
+        System.out.println(x + "," + y);
     }
 
     private static void concat() {
@@ -63,43 +84,43 @@ public class strDemo {
 //        将所有在此字符 String使用默认语言环境的规则，以小写。
         System.out.println("lowerCase=:" + greeting.toLowerCase());
         int length = greeting.length();
-        System.out.println("greeting长度=:" +length);
+        System.out.println("greeting长度=:" + length);
         System.out.println("lowerCase=:" + greeting.trim());
         System.out.println("greeting长度=:" + greeting.length());
     }
 
-    private static void strBuilderDemo(){
-        StringBuffer buffer= new StringBuffer();
+    private static void strBuilderDemo() {
+        StringBuffer buffer = new StringBuffer();
         buffer.append("dd");
         buffer.append("-abc");
         String s = buffer.toString();
-        System.out.println("s=:"+s);
+        System.out.println("s=:" + s);
 
         StringBuilder builder = new StringBuilder();
         builder.append("ch");
         builder.append("str");
 
 
-        builder.insert(1,"demo");
+        builder.insert(1, "demo");
         String commleted = builder.toString();
-        System.out.println("commleted=:"+commleted);
+        System.out.println("commleted=:" + commleted);
 
     }
 
-    private static void demoInput(){
+    private static void demoInput() {
         Scanner in = new Scanner(System.in);
         System.out.println("What is your name?");
         String name = in.nextLine();
-        System.out.println("name+:"+name);
+        System.out.println("name+:" + name);
         System.out.println("How old are you?");
         int age = in.nextInt();
-        System.out.println("age=:"+age);
+        System.out.println("age=:" + age);
 
-        display(name,age);
+        display(name, age);
     }
 
-    private static void display(String name,int age){
+    private static void display(String name, int age) {
 
-        System.out.println("Hello,"+name+". Next year ,you'11 be "+(age+1));
+        System.out.println("Hello," + name + ". Next year ,you'11 be " + (age + 1));
     }
 }
