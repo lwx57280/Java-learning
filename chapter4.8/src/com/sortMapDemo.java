@@ -22,13 +22,13 @@ public class sortMapDemo {
      * @return
      */
     private static Map<Integer, Person> initMap() {
-        Person zhangsan = new Person(2,"张三", 20);
-        Person lisi = new Person(5,"李四", 30);
-        Person wangliuOne = new Person(4,"王六", 10);
-        Person wangliuTwo = new Person(3,"王六", 10);
-        Person xiaoqiangOne = new Person(1,"小强", 15);
-        Person xiaoqiangTwo = new Person(11,"小强", 15);
-        Person xiongda = new Person(13,"熊大", 25);
+        Person zhangsan = new Person(2, "张三", 20);
+        Person lisi = new Person(5, "李四", 30);
+        Person wangliuOne = new Person(4, "王六", 10);
+        Person wangliuTwo = new Person(3, "王六", 10);
+        Person xiaoqiangOne = new Person(1, "小强", 15);
+        Person xiaoqiangTwo = new Person(11, "小强", 15);
+        Person xiongda = new Person(13, "熊大", 25);
 
         Map<Integer, Person> map = new HashMap<>();
         map.put(wangliuTwo.getId(), wangliuTwo);
@@ -61,30 +61,48 @@ public class sortMapDemo {
      * @return 有序
      */
     public static <K, V> Map<K, V> sortMap(Map<? extends Integer, V> origMap, final boolean isDesc) {
+        Map<K,V> sortedMap = new LinkedHashMap<>();
 
         if (origMap == null || origMap.isEmpty()) {
             return null;
         }
-        if (isDesc) {
-            Map<Integer, V> sortTempMap = new TreeMap<Integer, V>(new Comparator<Integer>() {
-                @Override
-                public int compare(Integer key1, Integer key2) {
-                    return key1.compareTo(key2);
+        //if (isDesc) {
+        List<Map.Entry<? extends Integer, V>> arrayList = new ArrayList<>(origMap.entrySet());
+        Collections.sort(arrayList, new Comparator<Map.Entry<? extends Integer, V>>() {
+            @Override
+            public int compare(Map.Entry<? extends Integer, V> o1, Map.Entry<? extends Integer, V> o2) {
+                int key1 = 0, key2 = 0;
+                try {
+                    key1 = o1.getKey();
+                    key2 = o2.getKey();
+                } catch (NumberFormatException e) {
+                    key1 = 0;
+                    key2 = 0;
                 }
-            });
-            // 数据是用TreeMap存储的
-            sortTempMap.putAll(origMap);
-            return (Map<K, V>) sortTempMap;
-        } else {
-            Map<Integer, V> sortTempMap = new TreeMap<Integer, V>(new Comparator<Integer>() {
-                @Override
-                public int compare(Integer key1, Integer key2) {
-                    return key2.compareTo(key1);
-                }
-            });
-            sortTempMap.putAll(origMap);
-            return (Map<K, V>) sortTempMap;
+                return isDesc == true ? key1 - key2 : key2 - key1;
+            }
+        });
+        Iterator<Map.Entry<? extends Integer, V>> iterator = arrayList.iterator();
+        Map.Entry<? extends Integer, V> tempEntry = null;
+        while (iterator.hasNext()){
+            tempEntry = iterator.next();
+            K key =(K) tempEntry.getKey();
+            sortedMap.put(key,tempEntry.getValue());
         }
+        return sortedMap;
+        // 数据是用TreeMap存储的
+//        sortTempMap.putAll(origMap);
+//        return (Map<K, V>) sortTempMap;
+//        } else {
+//            Map<Integer, V> sortTempMap = new TreeMap<Integer, V>(new Comparator<Integer>() {
+//                @Override
+//                public int compare(Integer key1, Integer key2) {
+//                    return key2.compareTo(key1);
+//                }
+//            });
+//            sortTempMap.putAll(origMap);
+//            return (Map<K, V>) sortTempMap;
+//        }
     }
 
     static class Person {
