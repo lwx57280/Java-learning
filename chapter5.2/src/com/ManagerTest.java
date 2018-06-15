@@ -18,8 +18,9 @@ public class ManagerTest {
         staff[1]=new Employee("Harry Hacker",50000,1989,10,1);
         staff[2]=new  Employee("Tommy Tester",40000,1990,3,15);
 
-        for (Employee e:staff)
-            System.out.println("name=:"+e.getName()+",salary=:"+e.getSalary()+",HireDay:"+e.getHireDay());
-
+        for (Employee e:staff) {
+            System.out.println("name=:" + e.getName() + ",salary=:" + e.getSalary() + ",HireDay:" + e.getHireDay());
+            System.out.println("e=:"+e.equals(boss));
+        }
     }
 }
