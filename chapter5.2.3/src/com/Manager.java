@@ -35,6 +35,7 @@ public class Manager extends Employee {
 
     @Override
     public String toString() {
+        // 如果超类使用了getClass().getName(),那么子类只要调用super.toString()就可以了,如下:
         return super.toString()+"[bouns="+bouns+"]";
     }
 }
