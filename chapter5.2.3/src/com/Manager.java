@@ -30,6 +30,7 @@ public class Manager extends Employee {
         if(!super.equals(otherObj))
             return false;
         Manager other =(Manager)otherObj;
+        // 检查此类和其他类是否属于同一个类。
         return bouns==other.bouns;
     }
 
