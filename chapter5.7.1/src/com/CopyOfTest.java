@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 
 /**
- *  使用反射编写泛型数组
+ * 使用反射编写泛型数组
  */
 public class CopyOfTest {
     public static void main(String[] args) {
@@ -13,6 +13,13 @@ public class CopyOfTest {
         a = (int[]) goodCopyOf(a, 10);
         System.out.println(Arrays.toString(a));
 
+        String[] b = {"Tom", "Dick", "Harry"};
+        b = (String[]) goodCopyOf(b, 10);
+        System.out.println(Arrays.toString(b));
+
+//        System.out.println("下面的调用将生成一个异常");
+//
+//        b = (String[])goodCopyOf(b,10);
     }
 
     /**
@@ -41,10 +48,11 @@ public class CopyOfTest {
         if (!cl.isArray()) {
             return null;
         }
-        Class componetType = cl.getComponentType();
+        Class componentType = cl.getComponentType();
         // 返回指定数组对象的长度，如 int 。
         int length = Array.getLength(a);
-        Object newArray = Array.newInstance(componetType, newLength);
+        // 返回一个具有给定类型、给定位数的新数组
+        Object newArray = Array.newInstance(componentType, newLength);
         // 将指定源数组中的数组从指定位置复制到目标数组的指定位置。
         System.arraycopy(a, 0, newArray, 0, Math.min(length, newLength));
         return newArray;
