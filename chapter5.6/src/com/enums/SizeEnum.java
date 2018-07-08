@@ -1,6 +1,6 @@
 package com.enums;
 
-public enum Size {
+public enum SizeEnum {
 
     SMALL("S"),
     MEDIUM("M"),
@@ -11,7 +11,7 @@ public enum Size {
 
     private String abbreviation;
 
-    Size(String abbreviation) {
+    SizeEnum(String abbreviation) {
         this.abbreviation = abbreviation;
     }
 
