@@ -8,7 +8,6 @@ public class DynamicParam {
         double result = max(3.1, 40.4, -5, 50.5);
         System.out.println("result=:" + result);
     }
-
     /**
      * 计算若干个数值的最大值
      *
