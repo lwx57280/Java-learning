@@ -7,8 +7,9 @@ import java.lang.reflect.Modifier;
 import java.util.Scanner;
 
 /**
+ * 利用反射分析类的能力
  * 异常捕获
- *
+ * <p>
  * 一、什么是反射?
  * 通过类说明可以得到这个类的父类、实现的所有接口、内部类、方法、
  * 构造、属性，可以通过构造实例化对象、唤起方法、取属性值，
@@ -29,6 +30,7 @@ public class ReflectionTest {
             // 打印类名和超类名称
             Class clazz = Class.forName(name);
             Class superz = clazz.getSuperclass();
+            // 打印修饰符
             String modifiers = Modifier.toString(clazz.getModifiers());
             if (modifiers.length() > 0)
                 System.out.println(modifiers + " ");
@@ -62,8 +64,8 @@ public class ReflectionTest {
             System.out.println(" ");
             String modifiers = Modifier.toString(f.getModifiers());
             if (modifiers.length() > 0)
-                System.out.println(modifiers + " ");
-            System.out.println(type.getName() + "" + name + ";");
+                System.out.println(modifiers + ":= ");
+            System.out.println(type.getName() + " " + name + ";");
         }
     }
 
@@ -88,6 +90,7 @@ public class ReflectionTest {
             for (int i = 0; i < paramTypes.length; i++) {
                 if (i > 0)
                     System.out.println(",");
+                // 类，接口，数组类，原始类型或void
                 System.out.println(paramTypes[i].getName());
             }
             System.out.println(");");
