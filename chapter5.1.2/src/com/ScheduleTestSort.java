@@ -46,7 +46,7 @@ public class ScheduleTestSort {
         trainingSchedule10.setId("s10");
         trainingSchedule10.setTitle("第二天");
 
-        TrainingSchedule trainingSchedule11 =new TrainingSchedule();
+        TrainingSchedule trainingSchedule11 = new TrainingSchedule();
         trainingSchedule11.setId("s11");
         trainingSchedule11.setTitle("第一天");
 
@@ -74,37 +74,39 @@ public class ScheduleTestSort {
 
     private static void printList(List<TrainingSchedule> scheduleList) {
 
-        for (TrainingSchedule schedule: scheduleList) {
-            System.out.println("schedule=:"+schedule.getId()+",Title=:"+schedule.getTitle());
+        for (TrainingSchedule schedule : scheduleList) {
+            System.out.println("schedule=:" + schedule.getId() + ",Title=:" + schedule.getTitle());
         }
     }
-    private static  Map<String, Integer> map = new HashMap<>();
+
+    private static Map<String, Integer> map = new HashMap<>();
 
     /**
      * 定义比较规则
      */
     static {
-        map.put("第一天",1);
-        map.put("第二天",2);
-        map.put("第三天",3);
+        map.put("第一天", 1);
+        map.put("第二天", 2);
+        map.put("第三天", 3);
     }
 
     /**
      * 插入排序
+     *
      * @param scheduleList
      */
-    public static void insertSort(List<TrainingSchedule> scheduleList){
+    public static void insertSort(List<TrainingSchedule> scheduleList) {
         TrainingSchedule temp;
-        int index,out,tempInt;
-        for (out=1; out<scheduleList.size();out++){
+        int index, out, tempInt;
+        for (out = 1; out < scheduleList.size(); out++) {
             temp = scheduleList.get(out);
             tempInt = map.get(temp.getTitle());
             index = out;
-            while (index > 0 && map.get(scheduleList.get(index-1).getTitle())>tempInt){
-                scheduleList.set(index,scheduleList.get(index-1));
+            while (index > 0 && map.get(scheduleList.get(index - 1).getTitle()) > tempInt) {
+                scheduleList.set(index, scheduleList.get(index - 1));
                 index--;
             }
-            scheduleList.set(index,temp);
+            scheduleList.set(index, temp);
         }
     }
 
@@ -123,7 +125,7 @@ public class ScheduleTestSort {
                 tempList.add(trainingSchedule);
             }
         }
-        List<List<TrainingSchedule>> resultList=new ArrayList<List<TrainingSchedule>>();
+        List<List<TrainingSchedule>> resultList = new ArrayList<List<TrainingSchedule>>();
 
         for (Map.Entry<String, List<TrainingSchedule>> listEntry : listMap.entrySet()) {
             String key = listEntry.getKey();
@@ -138,16 +140,15 @@ public class ScheduleTestSort {
     }
 
 
-
     private static void print(List<List<TrainingSchedule>> resultList) {
 
-        if(resultList.size()!=0&& !resultList.isEmpty()) {
+        if (resultList.size() != 0 && !resultList.isEmpty()) {
             for (int i = 0; i < resultList.size(); i++) {
-               System.out.println("第"+(i+1)+"组");
-               for (int j=0;j<resultList.get(i).size();j++){
-                   TrainingSchedule trainingSchedule = resultList.get(i).get(j);
-                   System.out.println("trainingSchedule=:"+trainingSchedule.getId()+",Titile=:"+trainingSchedule.getTitle());
-               }
+                System.out.println("第" + (i + 1) + "组");
+                for (int j = 0; j < resultList.get(i).size(); j++) {
+                    TrainingSchedule trainingSchedule = resultList.get(i).get(j);
+                    System.out.println("trainingSchedule=:" + trainingSchedule.getId() + ",Titile=:" + trainingSchedule.getTitle());
+                }
             }
         }
     }
