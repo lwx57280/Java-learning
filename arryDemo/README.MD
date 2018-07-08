@@ -1,7 +1,10 @@
 Java集合框架体系
 ---------------
+![Java集合框架体系](https://github.com/lwx57280/Java-learning/blob/master/arryDemo/img-folder/20170504143031569.gif)
+
 Java集合有Collection体系和Map体系：
 
+![Collection体系和Map体系](https://github.com/lwx57280/Java-learning/blob/master/arryDemo/img-folder/1151252-20170507001024648-335053657.png)
 
 然后简单介绍一下数据结构和算法：
 
@@ -13,7 +16,7 @@ Java集合有Collection体系和Map体系：
 
 逻辑结构：
 ---------
-    
+ ![逻辑结构](https://github.com/lwx57280/Java-learning/blob/master/arryDemo/img-folder/1151252-20170507003903351-1686175461.png)
     
  * <p>
  * 顺序存储结构：
