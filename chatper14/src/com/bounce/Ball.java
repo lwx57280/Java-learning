@@ -33,7 +33,7 @@ public class Ball {
             x = bounds.getMinX();
             dx = -dx;
         }
-        if (x + XSIZE >= bounds.getMaxY()) {
+        if (x + XSIZE >= bounds.getMaxX()) {
             x = bounds.getMaxX() - XSIZE;
             dx = -dx;
         }

@@ -54,7 +54,7 @@ public class BounceFrame extends JFrame {
                 Thread.sleep(DELAY);
             }
         } catch (InterruptedException e) {
-
+            
         }
     }
 
