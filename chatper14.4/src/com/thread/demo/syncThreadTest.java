@@ -4,6 +4,7 @@ package com.thread.demo;
  * 线程同步
  */
 public class syncThreadTest {
+
     public static void main(String[] args) {
         final Bank bank = new Bank();
         Thread tadd = new Thread(() -> {
