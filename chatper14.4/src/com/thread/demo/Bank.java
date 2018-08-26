@@ -1,12 +1,7 @@
 package com.thread.demo;
 
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
-
 public class Bank {
     private int count = 0;   // 账号余额
-
-    private Lock lock = new ReentrantLock();
 
     /**
      * 存钱
