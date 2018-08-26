@@ -2,6 +2,7 @@
 java学习之路
 
 一、基础知识：
+
 1、JVM、JRE和JDK的区别：
 	JVM(Java Virtual Machine):java虚拟机，用于保证java的跨平台的特性。
 				  java语言是跨平台，jvm不是跨平台的。
