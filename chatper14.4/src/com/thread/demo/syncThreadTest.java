@@ -22,7 +22,7 @@ public class syncThreadTest {
 
         Thread tsub = new Thread(() -> {
             while (true) {
-                bank.addMoney(100);
+                bank.subMoney(100);
                 bank.lookMoney();
                 System.out.println("\n");
                 try {
