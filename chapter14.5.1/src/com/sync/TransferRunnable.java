@@ -1,7 +1,7 @@
 package com.sync;
 
 /**
- * 把钱从一个账户转到另一个银行账户的可运行的
+ * 把钱从一个账户转到另一个银行账户
  */
 public class TransferRunnable implements Runnable {
 
