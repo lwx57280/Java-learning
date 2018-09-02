@@ -17,7 +17,7 @@ public class BlockingQueueTest {
         String keyword = in.nextLine();
         final int FILE_QUEUE_SIZE = 10;
         final int SEARCH_THREADS = 100;
-        BlockingQueue<File> queue = new ArrayBlockingQueue<File>(FILE_QUEUE_SIZE);
+        BlockingQueue<File> queue = new ArrayBlockingQueue<>(FILE_QUEUE_SIZE);
         FileEnumerationTask enumerator = new FileEnumerationTask(queue, new File(directory));
         new Thread(enumerator).start();
         for (int i = 1; i <= SEARCH_THREADS; i++)
