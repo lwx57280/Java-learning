@@ -2,6 +2,7 @@ package com.shuffle;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -19,5 +20,15 @@ public class ShuffleTest {
         List<Integer> winningCombination = numbers.subList(0, 6);
         Collections.sort(winningCombination);
         System.out.println(winningCombination);
+
+        // 逆序排序
+        Comparator cmp = Collections.reverseOrder();
+        Collections.sort(winningCombination,cmp);
+        System.out.println("cmp="+winningCombination);
+
+        // 正序排列
+        Comparator cmp2 = Collections.reverseOrder(cmp);
+        Collections.sort(winningCombination,cmp2);
+        System.out.println("cmp2="+winningCombination);
     }
 }
