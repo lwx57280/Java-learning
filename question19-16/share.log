@@ -1,0 +1,102 @@
+2019-12-14T15:42:33.259+08:00| vmx| I125: Log for VMware Workstation pid=22392 version=15.5.1 build=build-15018445 option=Release
+2019-12-14T15:42:33.259+08:00| vmx| I125: The process is 64-bit.------------------already----------already------------
+2019-12-14T15:42:33.259+08:00| vmx| I125: Host codepage=windows-936 encoding=GBK
+2019-12-14T15:42:33.259+08:00| vmx| I125: Host is Windows 10, 64-bit  (Build 18362)
+2019-12-14T15:42:33.186+08:00| vmx| I125: VTHREAD 9324 "vmx" ---------------already---------------------
+2019-12-14T15:42:33.187+08:00| vmx| I125: DictionaryLoad: Error Cannot open file "C:\ProgramData\VMware\vCenterServer\cfg\vsphereFeatures\techPreview.cfg": The system cannot find the path specified.
+2019-12-14T15:42:33.187+08:00| vmx| I125: [msg.dictionary.load.openFailed] Cannot open file "C:\ProgramData\VMware\vCenterServer\cfg\vsphereFeatures\techPreview.cfg": The system cannot find the path specified.
+2019-12-14T15:42:33.187+08:00| vmx| I125: FeatureStateLib: Error while loading tech preview config file: C:\ProgramData\VMware\vCenterServer\cfg\vsphereFeatures\techPreview.cfg, using default (disabled) for all Tech Preview features.
+2019-12-14T15:42:33.189+08:00| vmx| I125: LOCALE GBK -> zh_CN User=804 System=804
+2019-12-14T15:42:33.189+08:00| vmx| I125: Msg_SetLocaleEx: HostLocale=GBK UserLocale=zh_CN
+2019-12-14T15:42:33.240+08:00| vmx| I125: DictionaryLoad: Cannot open file "C:\Users\licongzhi\AppData\Roaming\VMware\config.ini": The system cannot find the file specified.
+2019-12-14T15:42:33.240+08:00| vmx| I125: Msg_Reset:Error
+2019-12-14T15:42:33.240+08:00| vmx| I125: [msg.dictionary.load.openFailed] Cannot open file "C:\Users\licongzhi\AppData\Roaming\VMware\config.ini": The system cannot find the file specified.
+2019-12-14T15:42:33.240+08:00| vmx| I125: --------------- already-------------------------Objlib already------------
+2019-12-14T15:42:33.240+08:00| vmx| I125: ConfigDB: Failed to load C:\Users\licongzhi\AppData\Roaming\VMware\config.ini already
+2019-12-14T15:42:33.240+08:00| vmx| I125: Win32U_GetFileAttributes: GetFileAttributesExW("D:\Linux\Red Linux 8 64 位.vmpl", ...) failed, error: 2
+2019-12-14T15:42:33.240+08:00| vmx| I125: OBJLIB-LIB: Objlib initialized.Objlib Objlib already---------------------
+2019-12-14T15:42:33.243+08:00| vmx| I125: DictionaryLoad: Cannot open file "C:\Users\licongzhi\AppData\Roaming\VMware\config.ini": The system cannot find the file specified.
+2019-12-14T15:42:33.243+08:00| vmx| I125: [msg.dictionary.load.openFailed] Cannot open file "C:\Users\licongzhi\AppData\Roaming\VMware\config.ini": The system cannot find the file specified.
+2019-12-14T15:42:33.243+08:00| vmx| I125: PREF Optional preferences file not found at C:\Users\licongzhi\AppData\Roaming\VMware\config.ini. Using default values.
+2019-12-14T15:42:33.243+08:00| vmx| I125: UUID: SMBIOS UUID is reported as 'e3 9e 2b 52 70 e3 35 4e-9b 61 98 13 d5 c2 d3 0b'.
+2019-12-14T15:42:33.243+08:00| vmx| I125: FILE: FileLockDynaLink: Further process validation tools are: available
+2019-12-14T15:42:33.256+08:00| vmx| I125: lib/ssl: OpenSSL using FIPS_drbg for RAND already
+2019-12-14T15:42:33.256+08:00| vmx| I125: lib/ssl: protocol list tls1.2 already
+2019-12-14T15:42:33.256+08:00| vmx| I125: lib/ssl: protocol list tls1.2 (openssl flags 0x17000000)
+2019-12-14T15:42:33.256+08:00| vmx| I125: lib/ssl: cipher list ECDHE+AESGCM:RSA+AESGCM:ECDHE+AES:RSA+AES
+2019-12-14T15:42:33.256+08:00| vmx| I125: lib/ssl: curves list prime256v1:secp384r1:secp521r1
+2019-12-14T15:42:33.259+08:00| vmx| I125: Hostname=DESKTOP-QP0II95
+2019-12-14T15:42:33.264+08:00| vmx| I125: IP=fe80::a4f6:1be9:dffb:526e%6
+2019-12-14T15:42:33.264+08:00| vmx| I125: IP=192.168.1.102
+2019-12-14T15:42:33.285+08:00| vmx| I125: System uptime 113618223083 us
+2019-12-14T15:42:33.285+08:00| vmx| I125: Command line: "D:\Program Files (x86)\VMware\VMware Workstation\x64\vmware-vmx.exe" "-T" "querytoken" "-E" "zh_CN" "-s" "vmx.stdio.keep=TRUE" "-#" "product=1;name=VMware Workstation;version=15.5.1;buildnumber=15018445;licensename=VMware Workstation;licenseversion=15.0+;" "-@" "pipe=\\.\pipe\vmxad0d07f782032bdd;msgs=ui" "D:\Linux\Red Linux 8 64 位.vmx"
+2019-12-14T15:42:33.285+08:00| vmx| I125: Msg_SetLocaleEx: HostLocale=GBK UserLocale=zh_CN
+2019-12-14T15:42:33.341+08:00| vmx| I125: WQPoolAllocPoll : pollIx = 1, signalHandle = 832
+2019-12-14T15:42:33.341+08:00| vmx| I125: WQPoolAllocPoll : pollIx = 2, signalHandle = 776
+2019-12-14T15:42:33.342+08:00| vmx| I125: VigorTransport listening on fd 772
+2019-12-14T15:42:33.342+08:00| vmx| I125: Vigor_Init 1
+2019-12-14T15:42:33.342+08:00| vmx| I125: Connecting 'ui' to pipe '\\.\pipe\vmxad0d07f782032bdd' with user '(null)'
+2019-12-14T15:42:33.342+08:00| vmx| I125: VMXVmdb: Local connection timeout: 60000 ms.
+2019-12-14T15:42:33.366+08:00| vmx| I125: VmdbAddConnection: cnxPath=/db/connection/#1/, cnxIx=1
+2019-12-14T15:42:33.366+08:00| vmx| I125: Vix: [mainDispatch.c:486]: VMAutomation: Initializing VMAutomation.
+2019-12-14T15:42:33.455+08:00| vmx| I125: IOPL_VBSRunning: VBS is set to 0
+2019-12-14T15:42:33.456+08:00| vmx| I125: IOCTL_VMX86_SET_MEMORY_PARAMS already set
+2019-12-14T15:42:33.457+08:00| vmx| I125: FeatureCompat: already No EVC masks.
+2019-12-14T15:42:33.470+08:00| vmx| I125: hostCPUID vendor:already  GenuineIntel
+2019-12-14T15:42:33.470+08:00| vmx| I125: hostCPUID family: Error 0x6 model: 0x8e stepping: 0xa
+2019-12-14T15:42:33.470+08:00| vmx| I125: hostCPUID codename:  Error Coffee Lake-U
+2019-12-14T15:42:33.470+08:00| vmx| I125: hostCPUID name: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz
+2019-12-14T15:42:33.470+08:00| vmx| I125: hostCPUID level 00000000, 0: 0x00000016 0x756e6547 0x6c65746e 0x49656e69
+2019-12-14T15:42:33.470+08:00| vmx| I125: hostCPUID level 00000001, 0: 0x000806ea 0x00100800 0x7ffafbbf 0xbfebfbff
+2019-12-14T15:42:33.470+08:00| vmx| I125: hostCPUID level 00000002, 0: 0x76036301 0x00f0b5ff 0x00000000 0x00c30000
+2019-12-14T15:42:33.470+08:00| vmx| I125: hostCPUID level 00000003, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+2019-12-14T15:42:33.470+08:00| vmx| I125: hostCPUID level 00000004, 0: 0x1c004121 0x01c0003f 0x0000003f 0x00000000
+2019-12-14T15:42:33.470+08:00| vmx| I125: hostCPUID level 00000004, 1: 0x1c004122 0x01c0003f 0x0000003f 0x00000000
+2019-12-14T15:42:33.470+08:00| vmx| I125: hostCPUID level 00000004, 2: 0x1c004143 0x00c0003f 0x000003ff 0x00000000
+2019-12-14T15:42:33.470+08:00| vmx| I125: hostCPUID level 00000004, 3: 0x1c03c163 0x03c0003f 0x00001fff 0x00000006
+2019-12-14T15:42:33.470+08:00| vmx| I125: hostCPUID level 00000004, 4: 0x00000000 0x00000000 0x00000000 0x00000000
+2019-12-14T15:42:33.470+08:00| vmx| I125: hostCPUID level 00000005, 0: 0x00000040 0x00000040 0x00000003 0x11142120
+2019-12-14T15:42:33.470+08:00| vmx| I125: hostCPUID level 00000006, 0: 0x000027f7 0x00000002 0x00000009 0x00000000
+2019-12-14T15:42:33.470+08:00| vmx| I125: hostCPUID level 00000007, 0: 0x00000000 0x029c67af 0x00000000 0x9c000000
+2019-12-14T15:42:33.470+08:00| vmx| I125: hostCPUID level 00000008, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+2019-12-14T15:42:33.470+08:00| vmx| I125: hostCPUID level 00000009, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+2019-12-14T15:42:33.470+08:00| vmx| I125: hostCPUID level 0000000a, 0: 0x07300404 0x00000000 0x00000000 0x00000603
+2019-12-14T15:42:33.470+08:00| vmx| I125: hostCPUID level 0000000b, 0: 0x00000001 0x00000002 0x00000100 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 0000000b, 1: 0x00000004 0x00000008 0x00000201 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 0000000b, 2: 0x00000000 0x00000000 0x00000002 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 0000000c, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 0000000d, 0: 0x0000001f 0x00000440 0x00000440 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 0000000d, 1: 0x0000000f 0x000003c0 0x00000100 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 0000000d, 2: 0x00000100 0x00000240 0x00000000 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 0000000d, 3: 0x00000040 0x000003c0 0x00000000 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 0000000d, 4: 0x00000040 0x00000400 0x00000000 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 0000000d, 5: 0x00000000 0x00000000 0x00000000 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 0000000d, 6: 0x00000000 0x00000000 0x00000000 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 0000000d, 7: 0x00000000 0x00000000 0x00000000 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 0000000d, 8: 0x00000080 0x00000000 0x00000001 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 0000000e, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 0000000f, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 0000000f, 1: 0x00000000 0x00000000 0x00000000 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 00000010, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 00000010, 1: 0x00000000 0x00000000 0x00000000 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 00000010, 2: 0x00000000 0x00000000 0x00000000 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 00000010, 3: 0x00000000 0x00000000 0x00000000 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 00000011, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 00000012, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 00000012, 1: 0x00000000 0x00000000 0x00000000 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 00000012, 2: 0x00000000 0x00000000 0x00000000 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 00000012, 3: 0x00000000 0x00000000 0x00000000 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 00000013, 0: 0x00000000 0x00000000 0x00000000 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 00000014, 0: 0x00000001 0x0000000f 0x00000007 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 00000014, 1: 0x02490002 0x003f3fff 0x00000000 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 00000015, 0: 0x00000002 0x000000a6 0x00000000 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 00000016, 0: 0x000007d0 0x00000fa0 already 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 80000000, 0: 0x80000008 already 0x00000000 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 80000001, 0: 0x00000000 already 0x00000121 0x2c100800
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 80000002, 0: 0x65746e49 0x2952286c 0x726f4320 0x4d542865
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 80000003, 0: 0x37692029 0x3535382d 0x43205530 0x40205550
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 80000004, 0: 0x382e3120 0x7a484730 0x00000000 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 80000005, 0: 0x00000000 already 0x00000000 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 80000006, 0: Error 0x00000000 0x01006040 0x00000000
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 80000007, 0: 0x00000000 0x00000000 0x00000000 0x00000100
+2019-12-14T15:42:33.471+08:00| vmx| I125: hostCPUID level 80000008, 0: 0x00003027 0x00000000 0x00000000 0x00000000
