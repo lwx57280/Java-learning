@@ -29,7 +29,7 @@ public class Ticket implements Runnable {
         synchronized (obj) {
             if (num > 0) {
                 try {
-                    Thread.sleep(100);
+                    Thread.sleep(10);
                 } catch (InterruptedException e) {
                     e.getMessage();
                 }
