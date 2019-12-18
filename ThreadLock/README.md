@@ -6,7 +6,7 @@
 如下图所示，线程 A 持有资源 2，线程 B 持有资源 1，他们同时都想申请对方的资源，所以这两个线程就会互相等待而进入死锁状态。
 
 
-![线程死锁](D:\Source\Branch\Java-learning\ThreadLock\img-folder\thread.png)
+![线程死锁](https://github.com/lwx57280/Java-learning/blob/master/ThreadLock/img-folder/thread.png)
 
 
 下面通过一个例子来说明线程死锁,代码模拟了上图的死锁的情况 (代码来源于《并发编程之美》)：
