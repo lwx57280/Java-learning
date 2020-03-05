@@ -6,6 +6,9 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
 
+/**
+ * 【网络编程(TCP协议-练习)上传图片发送发送到服务端】
+ */
 public class UploadPicClient {
 
     public static void main(String[] args) throws IOException {
